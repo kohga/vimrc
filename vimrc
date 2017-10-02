@@ -45,7 +45,7 @@ let g:python_highlight_all = 1
 " Remove the space at the time of storage
 autocmd BufWritePre * :%s/s+$//e
 
-
+set undodir=D:~.vim_undo/
 
 " -------------
 "  Indent
@@ -162,13 +162,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "NeoBundle 'vim-scripts/rdark'
 "NeoBundle 'jacoborus/tender'
 "NeoBundle 'Haron-Prime/Antares'
-NeoBundle 'vim-scripts/Lucius'
 "NeoBundle 'vim-scripts/Zenburn'
 "NeoBundle 'mrkn/mrkn256.vim'
 "NeoBundle 'jpo/vim-railscasts-theme'
 "NeoBundle 'jdkanani/vim-material-theme'
 "NeoBundle 'raphamorim/lucario'
-
+NeoBundle 'vim-scripts/Lucius'
 
 " basic
 if has('lua')
@@ -511,7 +510,9 @@ let g:clang_cpp_options = '-std=c++11 -stdlib=libc++'
 "  MorkDown
 " -------------
 au BufRead,BufNewFile *.md set filetype=markdown
-let g:previm_open_cmd = 'open -a Firefox'
+"let g:previm_open_cmd = 'open -a Firefox'
+let g:previm_open_cmd = 'open -a Safari'
+nnoremap pv  :PrevimOpen<CR>
 
 
 
@@ -577,3 +578,4 @@ let g:Tex_IgnoredWarnings =
 let g:Tex_IgnoreLevel = 16
 
 
+set shortmess+=I

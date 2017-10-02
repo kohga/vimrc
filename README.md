@@ -1,33 +1,86 @@
- .vimrc (For Linux and MacOS)
- By Kohki HAGA
+# vimrc
+**Version 1.0**   
+**For Linux and MacOS**   
 
+
+## Summary
+This project is the setting of vim.   
+
+
+
+## How to
+
+**Linux**
 ----
- HOW TO USE
- $ mv .vimrc ~/.vimrc
 
-*********
- If you want to install manually, please install git and setup NeoBundle!
+**1. Install**   
+#### _Debian, Ubuntu_
+1-1. Install vim and gvim   
+ex)   
+```
+$ sudo apt-get install vim
+$ sudo apt-get install vim-gtk
+```
 
- $ sudo apt-get install git
- or
- $ sudo apt install git
- or
- $ sudo yum install git
+1-2. Install git   
+ex)   
+```
+$ sudo apt-get install git
+```
 
- $ mkdir -p ~/.vim/bundle
- $ git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+#### _CentOS, Fedora, Red Hat Enterprise Linux_
+1-1. Install vim and gvim   
+ex)   
+```
+$ sudo yum install vim
+$ sudo yum install vim-gtk
+```
 
- $ sudo chmod 777 ~/.vim/bundle/.neobundle/*
+1-2. Install git   
+ex)   
+```
+$ sudo yum install git
+```
 
- ----
- When you want to use any administrative privileges (root)
- $ sudo vim -u ~/.vimrc
- or
- $ sudo ln -s ~/.vimrc /root/.vimrc
+**2. Make Backup**
+```
+$ make backup
+```
+
+**3. Make vimrc**
+```
+$ make
+```
+
+**4. Make SymbolicLink (root)**
+```
+$ make root
+```
+If Error occurred...
+```
+$ make rootclean
+$ make root
+```
 
 
- *********
- If you are using Mac OS X.
- $ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
- $ sh ./install.sh
+**MacOS**
+----
+**1. Install Homebrew and git**   
+ex)   
+```
+$ xcode-select --install
+$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ brew install git
+```
+**2. Install MacVim [from Kaoriya](https://github.com/splhack/macvim-kaoriya)**
+
+**3. Make Backup**
+```
+$ make backup
+```
+
+**4. Make vimrc**
+```
+$ make mac
+```
 

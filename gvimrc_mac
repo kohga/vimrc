@@ -4,7 +4,7 @@
 " --------------------------
 
 set showtabline=2
-set transparency=12 " 透明度 (For Mac OS X)
+set transparency=1 " 透明度 (For Mac OS X)
 set imdisable
 set guioptions-=T
 set antialias
@@ -13,8 +13,8 @@ set number
 set nobackup
 set visualbell t_vb=
 set nowrapscan
-set columns=100
-set lines=48
+set columns=120
+set lines=58
 
 syntax enable
 set t_Co=256
@@ -23,4 +23,4 @@ colorscheme lucius
 set background=dark
 
 highlight Normal ctermbg=none
-set guifont=Andale\ Mono:h14
+set guifont=Andale\ Mono:h12
