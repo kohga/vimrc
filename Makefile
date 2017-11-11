@@ -1,8 +1,7 @@
 CUR_DIR=$(shell pwd)
 
-
-all: allclean cprc
-safety: backup vimclean rootclean cprc
+all: vimclean cprc
+safety: backup vimclean cprc
 deep: all lnroot
 shallow: cprc
 
@@ -33,7 +32,6 @@ backup: ${CUR_DIR}/vim_backup
 ${CUR_DIR}/vim_backup:
 	mkdir -p ${CUR_DIR}/vim_backup
 
-
 #
 # clean
 #
@@ -53,7 +51,6 @@ rootclean:
 clean:
 	rm -rf ${CUR_DIR}/vim_backup
 
-
 #
 # sub
 #
@@ -64,4 +61,3 @@ lnroot:
 
 setmac: gvimrc_mac
 	cp gvimrc_mac ~/.gvimrc
-

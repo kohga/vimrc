@@ -6,18 +6,14 @@
 " -------------
 "  Basic
 " -------------
-nnoremap ; :
-
 if &compatible
 	set nocompatible
 endif
 
+nnoremap ; :
 filetype plugin indent on
-
 syntax enable
 set t_Co=256
-
-set nocompatible
 set hlsearch
 set number
 set imdisable
@@ -60,8 +56,6 @@ set shiftwidth=4
 " tab -> space
 "set expandtab
 
-
-
 " -------------
 "  Move
 " -------------
@@ -74,8 +68,6 @@ inoremap <C-l> <Right>
 inoremap <ESC> <ESC>:set iminsert=0<CR>
 set whichwrap=b,s,<,>,[,]
 
-
-
 " -------------
 "  Command
 " -------------
@@ -86,8 +78,6 @@ inoremap <silent> <C-[> <Esc>
 inoremap <silent> <C-j> <C-^>
 nmap <Tab> gt
 nmap <S-Tab> gT
-
-
 
 " -------------
 "  taglits and tab
@@ -110,7 +100,6 @@ set listchars=tab:>-,trail:-,extends:<,precedes:<
 set showtabline=2
 set guioptions-=T
 
-
 " -------------
 "  For Tex
 " -------------
@@ -118,8 +107,6 @@ set guioptions-=T
 "set textwidth =78
 "autocmd Filetype text set formatoptions+=m
 "autocmd Filetype text set textwidth =78
-
-
 
 " --------------------------
 " NeoBundle
@@ -282,8 +269,6 @@ filetype plugin indent on
 NeoBundleCheck
 " }}}
 
-
-
 " --------------------------
 "  NeoBundle (Setting of each plug-in)
 " --------------------------
@@ -424,7 +409,6 @@ let g:user_emmet_settings = {
 			\ }}
 " }}}
 
-
 " -------------
 "  C lang
 " -------------
@@ -462,8 +446,6 @@ endif
 let g:clang_c_options = '-std=c11'
 let g:clang_cpp_options = '-std=c++11 -stdlib=libc++'
 " }}}
-
-
 
 " -------------
 "  Python
@@ -504,8 +486,6 @@ let g:clang_cpp_options = '-std=c++11 -stdlib=libc++'
 "autocmd TabEnter     *.py PyHlLVar
 "autocmd TabLeave     *.py PyHlLVar
 
-
-
 " -------------
 "  MorkDown
 " -------------
@@ -513,8 +493,6 @@ au BufRead,BufNewFile *.md set filetype=markdown
 "let g:previm_open_cmd = 'open -a Firefox'
 let g:previm_open_cmd = 'open -a Safari'
 nnoremap pv  :PrevimOpen<CR>
-
-
 
 " -------------
 "  Vim-LaTeX
@@ -577,5 +555,5 @@ let g:Tex_IgnoredWarnings =
 			\"Size substitutions with differences"
 let g:Tex_IgnoreLevel = 16
 
-
+" sorry, Uganda
 set shortmess+=I
