@@ -536,24 +536,18 @@ let g:Tex_ViewRule_pdf = 'evince'
 "let g:Tex_ViewRule_pdf = 'firefox -new-window'
 "let g:Tex_ViewRule_pdf = 'chromium --new-window'
 "let g:Tex_ViewRule_pdf = 'pdf'
+"let g:Tex_ViewRule_pdf = 'open -a Preview.app' "For Mac
+let g:Tex_IgnoreLevel = 9
 let g:Tex_IgnoredWarnings =
-			\'Underfull'."\n".
-			\'Overfull'."\n".
-			\'specifier changed to'."\n".
-			\'You have requested'."\n".
-			\'Missing number, treated as zero.'."\n".
-			\'There were undefined references'."\n".
-			\'Citation %.%# undefined'."\n".
-			\"Font shape \`JT1/gt/m/it\' undefined"."\n".
-			\"Font shape \`JY1/gt/m/it\' undefined"."\n".
-			\"Font shape \`JT1/mc/m/it\' undefined"."\n".
-			\"Font shape \`JY1/mc/m/it\' undefined"."\n".
-			\'LaTeX Font Warning: Some font shapes were not available, defaults substituted.'."\n".
-			\"Unused global option(s)"."\n".
-			\"Font shape `OT1/cmr/m/n' in size <16> not available"."\n".
-			\"Font shape `OT1/cmr/bx/n' in size <16> not available"."\n".
-			\"Size substitutions with differences"
-let g:Tex_IgnoreLevel = 16
+	\"Underfull\n".
+	\"Overfull\n".
+	\"specifier changed to\n".
+	\"You have requested\n".
+	\"Missing number, treated as zero.\n".
+	\"There were undefined references\n".
+	\"Citation %.%# undefined\n".
+	\"LaTeX Font Warning: Font shape `%s' undefined\n".
+	\"LaTeX Font Warning: Some font shapes were not available, defaults substituted."
 
 " sorry, Uganda
 set shortmess+=I
